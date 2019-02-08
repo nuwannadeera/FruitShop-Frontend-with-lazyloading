@@ -1,0 +1,81 @@
+<div style="margin-right: 15px; margin-top: 100px">
+
+
+
+      <div class="col-sm-4" style="background-color: #d9f1e3">
+        <br>
+
+  <form [formGroup]="customerform">
+          <div class="form-group">
+            CustomerName:  <input type="text" class="form-control" formControlName="customername" placeholder="Enter Customer Name">
+          </div>
+          <div class="form-group">
+              CustomerAddress:  <input type="text" class="form-control" formControlName="customeraddress" placeholder="Enter Customer Address">
+          </div>
+          <div class="form-group">
+              CustomerContactNo:  <input type="text" class="form-control" formControlName="customercontactno" placeholder="Enter Customer ContactNo">
+          </div>
+
+
+            <hr>
+            <h5 style="font-weight: bold">Search Customer Now...</h5>
+
+
+            <div class="form-group">
+                CustomerCID:  <input type="text" class="form-control" formControlName="customercid" placeholder="Enter Customer ID">
+            </div>
+            <br>
+            <button type="submit" (click)="saveCustomer()" class="btn btn-success">Save</button>
+            &nbsp;
+            <button type="submit" (click)="updateCustomer()" class="btn btn-primary">Update</button>
+            &nbsp;
+            <button type="submit" (click)="deleteCustomer()" class="btn btn-danger">Delete</button>
+            &nbsp;
+            <button type="button" (click)="searchCustomer()" class="btn btn-dark">Search</button>
+            <br>
+  </form>
+            <br>
+      </div>
+
+
+
+
+      <br>
+      <br>
+      <div class="tbl col-md-6 col-lg-12">
+        <table class="table table-bordered">
+          <thead class="bg-info">
+          <tr>
+            <th>CID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact No</th>
+          </tr>
+          </thead>
+          <tbody id="tbody">
+          <tr *ngFor="let customer of customerList">
+            <td>{{customer.cid}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.contactno}}</td>
+          </tr>
+          </tbody>
+
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+

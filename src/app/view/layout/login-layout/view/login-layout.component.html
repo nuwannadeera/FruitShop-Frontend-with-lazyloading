@@ -1,0 +1,20 @@
+
+<div>
+  <div class="login-page"><h2 style="position: center;margin-left: 20px;font-weight: bold">MIHIRA Fruit Shop...</h2>
+  <div class="form" style="background-color: lightgreen">
+
+    <form [formGroup] = "loginForm">
+      Username: <input type="text" formControlName="userName" placeholder="username"/>
+      <div *ngIf="userName.touched && userName.invalid" class="alert-danger"> Input Username here..</div>
+
+      Password: <input type="password" formControlName="password" placeholder="password"/>
+
+      <br>
+      <br>
+      <input type="button"  style="background-color: aqua" value="Login" (click) = "login()">
+
+      <p class="message" style="color: #EF3B3A">Not registered? <a href="#" style="color: black">Create an account</a></p>
+    </form>
+  </div>
+</div>
+</div>
